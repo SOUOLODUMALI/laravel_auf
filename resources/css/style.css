@@ -1,6 +1,3 @@
-@extends('layouts.ap')
-
-<style>
 *{
     box-sizing: border-box;
     padding: 0;
@@ -18,8 +15,8 @@
 }
 header{
     color: #fff;
-     background-color: rgb(170, 3, 3); 
-    /* border: 1px solid black; */
+    background-color: rgb(170, 3, 3);
+    border: 1px solid black;
     float: 50%;
      height: 100px; 
     width: 100%;
@@ -32,14 +29,19 @@ h3{
 
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- div{
-    margin-top: 7%; 
-} 
- .logo span{
+/* div{
+    margin-top: 7%; */
+/* } */
+.logo span{
     font-size: 3em;
     margin-left: 25%;
-    color:  rgb(170, 3, 3); 
+    color:  rgb(170, 3, 3);
 }
 #abonne {
 display: flex;
@@ -69,22 +71,4 @@ font-size: 2em;
     color:green;   
 }
 
-</style>
 
-
-@section('content')
-
-
-<header> <h3>   Bienvenu cher adminstrateur</h3></header>
-<SECtion id="primary">
-    <div class="logo">
-       <img src="{{asset('/images/logo_auf.jpg')}}" alt="logo" height="" width=""> 
-
-    </div>
-</SECtion>
-<section id="abonne">
-    <a href="{ {route('etudiant')}}"><h4 class="cas1">ajouter un abonne</h4></a>
-    <a href="{{ route('abonne.accueil')}}"><h4 class="cas2"> acceder la liste des abonnes</h4></a>
-</section>
-
-@endsection

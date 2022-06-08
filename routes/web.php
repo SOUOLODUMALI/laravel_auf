@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Postcontroller;
+use App\Http\Controllers\AbonneController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,13 +22,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
+Route::resource('abonne', AbonneController::class);
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/accueil',[App\Http\Controllers\Postcontroller::class, 'acueil'])->name('accueil');
-Route::get('/admins',[App\Http\Controllers\Postcontroller::class, 'admins'])->name('admins');
-Route::get('/authentif',[App\Http\Controllers\Postcontroller::class, 'authentif'])->name('authentif');
-Route::post('/etudiant', 'Postcontroller@etudiant')->name('etudiant');
-Route::get('/liste',[App\Http\Controllers\Postcontroller::class, 'liste'])->name('liste');
-
-
-Route::get('/etudiant', [App\Http\Controllers\Postcontroller::class, 'etudiant'])->name('etudiant')->middleware('auth');
+// Route::get('/accueil',[AufController::class,'accueil'])->name('abonne.accueil');
+//  Route::get('/etudiant',[AufController::class,'etudiant'])->name('etudiant');
+// Route::post('/etudiant/store',[AufController::class, 'store'])->name("abonne.store");
+// Route::get('/liste',[AufController::class,'liste']);

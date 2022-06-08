@@ -1,5 +1,5 @@
 
-@extends('layouts.app')
+@extends('layouts.ap')
 
 @section('content')
 
@@ -100,7 +100,7 @@ h2{
 
 </div>
   
-<a href="accueil.blade.php" class=""><button type="submit" class=""> quitter</button> </a>
+<a href="{{{('accueil')}}" class=""><button type="submit" class=""> quitter</button> </a>
   
 
 

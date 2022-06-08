@@ -18,13 +18,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
+    
     <header>
-    <h3>
-        LOGICIEL DE GESTION DES ABONNES DE L'AUF
-    </h3>
+    
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -61,6 +62,10 @@
                                     {{ Auth::user()->name }}
                                 </a>
 
+                                <h3 >
+        LOGICIEL DE GESTION DES ABONNES DE L'AUF
+    </h3>
+                               
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -71,10 +76,6 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-
-                                    <form action="{{route('etudiant')}}" method="POST">
-                                    @csrf
-                                </form>
                                 </div>
                             </li>
                         @endguest
@@ -88,6 +89,6 @@
         </main>
     </div>
 
-</header>
+
 </body>
 </html>

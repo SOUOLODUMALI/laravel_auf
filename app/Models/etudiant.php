@@ -2,15 +2,17 @@
 
 namespace App\Models;
 
-use App\Models\Etudiant;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class Etudiants extends Model
+
+
+
+class Etudiant extends Model
 {
     use HasFactory;
 
-            protected $table='etudiants';
+    // protected $table = 'etudiants';   
     protected $fillable =[
         'nom',
         'prenom',
@@ -19,4 +21,15 @@ class Etudiants extends Model
         'telephone',
         'date_abonnement'
     ];
+// function store()
+// {
+//     Etudiants::Create([  "nom" => "keita",
+//     'prenom' => 'gaoussou',
+//     'email' => 'afo@gmail.com',
+//     'naissance'=>'2004-05-06',
+//     'telephone' => '56040444',
+//     'date_abonnement' => '2022-02-09',
+// ]);}
+
 }
+
